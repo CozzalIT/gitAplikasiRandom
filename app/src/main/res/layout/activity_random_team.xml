@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomTeamActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvLabelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="15sp"
+            android:text="@string/label_name" />
+
+        <EditText
+            android:id="@+id/etMemberName"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_below="@id/tvLabelName"
+            android:inputType="text"/>
+
+        <Button
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelName"
+            android:layout_toRightOf="@id/etMemberName"
+            android:text="@string/btn_add_member"
+            android:onClick="addMember"/>
+
+        <TextView
+            android:id="@+id/tvLabelNumberOfMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="15sp"
+            android:layout_below="@id/etMemberName"
+            android:text="@string/number_of_member"/>
+
+        <EditText
+            android:id="@+id/etNumberOfMember"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_below="@id/tvLabelNumberOfMember"
+            android:inputType="number"/>
+
+        <Button
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelNumberOfMember"
+            android:layout_toRightOf="@id/etNumberOfMember"
+            android:text="@string/btn_generate"
+            android:onClick="generate"/>
+
+        <TextView
+            android:id="@+id/tvLabelList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="15sp"
+            android:layout_below="@id/etNumberOfMember"
+            android:text="@string/label_list"
+            android:textColor="@color/colorBlack"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:id="@+id/tvList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelList"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="5sp"
+            android:text="@string/list"
+            android:textColor="@color/colorRed"/>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Random Generator</string>
+    <string name="random_team">Random Team</string>
+    <string name="random_number">Random Number</string>
+    <string name="random_password">Random Password</string>
+    <string name="btn_add_member">Add Member</string>
+    <string name="btn_generate">Generate</string>
+    <string name="label_list">List Member</string>
+    <string name="label_name">Member Name :</string>
+    <string name="dice">Roll a Dice</string>
+    <string name="menu">Random Generator Menu</string>
+    <string name="number_of_member">Number of Member :</string>
+    <string name="list">No data entry!!</string>
+</resources>
