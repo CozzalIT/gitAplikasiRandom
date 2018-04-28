@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/btnRandomTeam"
-        android:layout_width="250sp"
+        android:layout_width="251sp"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvMenu"
         android:layout_marginTop="20sp"
