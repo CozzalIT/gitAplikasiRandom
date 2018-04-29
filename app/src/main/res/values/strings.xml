@@ -5,7 +5,7 @@
     <string name="random_password">Random Password</string>
     <string name="btn_add_member">Add Member</string>
     <string name="btn_generate">Generate</string>
-    <string name="label_list">List Member</string>
+    <string name="label_list">List Member/Team</string>
     <string name="label_name">Member Name :</string>
     <string name="dice">Roll a Dice</string>
     <string name="menu">Random Generator Menu</string>
