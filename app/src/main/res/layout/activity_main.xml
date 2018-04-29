@@ -34,7 +34,8 @@
         android:layout_below="@id/btnRandomTeam"
         android:layout_marginTop="5sp"
         android:layout_centerHorizontal="true"
-        android:text="@string/dice"/>
+        android:text="@string/dice"
+        android:onClick="rDice"/>
 
     <Button
         android:id="@+id/btnRandomNumber"

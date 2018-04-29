@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RandomDadu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etDice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/colorBlack"
+            android:textSize="120sp"
+            android:editable="false"
+            android:textAlignment="center" />
+        <Button
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/etDice"
+            android:onClick="generateDice"
+            android:text="@string/btn_generate" />
+
+
+    </RelativeLayout>
+</ScrollView>

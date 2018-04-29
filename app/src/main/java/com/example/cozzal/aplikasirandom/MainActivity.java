@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void rDice(View viem){
+        Intent intent = new Intent(MainActivity.this, RandomDadu.class);
+        startActivity(intent);
+    }
+
 }
