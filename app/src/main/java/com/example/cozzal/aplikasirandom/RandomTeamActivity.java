@@ -14,12 +14,14 @@ import java.util.Date;
 
 public class RandomTeamActivity extends AppCompatActivity {
     TextView tvList;
+    TextView tvLabelList;
     EditText etNumberOfMember;
     EditText etMemberName;
 
     String list = "", member, tmp, listTeam;
     String[] listMember = new String[50];
-    int i=0, numberOfMember, lngStr1, lngStr2, seconds, sumTeam;
+    String[] arrayTeamResult = new String[50];
+    int i=0, numberOfMember, lngStr1, lngStr2, seconds, sumTeam, teamNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +53,14 @@ public class RandomTeamActivity extends AppCompatActivity {
         etNumberOfMember = findViewById(R.id.etNumberOfMember);
         numberOfMember = Integer.parseInt(etNumberOfMember.getText().toString());
         RandomTeamActivity time = new RandomTeamActivity();
-        if (seconds > 10){
-            seconds = time.getTime()/10;
-        }
+
+        seconds = (time.getTime()/10) + (time.getTime()%10);
 
         for (int j=0;j<i;j++){
             for (int x=0;x<i-1;x++){
                 lngStr1 = listMember[x].length();
                 lngStr2 = listMember[x+1].length();
-                if ((lngStr1%seconds) > (lngStr2%seconds)){
+                if (((lngStr1%seconds)+x) > ((lngStr2%seconds)+j)){
                     tmp = listMember[x];
                     listMember[x] = listMember[x+1];
                     listMember[x+1] = tmp;
@@ -72,11 +73,17 @@ public class RandomTeamActivity extends AppCompatActivity {
             sumTeam += 1;
         }
 
-        for (int y=0;y<=sumTeam;y++){
-            listTeam = "Team 1\n";
-            for (int k=y;k<=numberOfMember+y;k++){
-                listTeam = listTeam + "- " + listMember[y] + "\n";
+        int ind = 0;
+        listTeam = "";
+        teamNumber = 0;
+        for (int y=0;y<sumTeam;y++){
+            teamNumber += 1;
+            arrayTeamResult[y] = "";
+            for (int k=1;k<=numberOfMember;k++){
+                arrayTeamResult[y] = arrayTeamResult[y]+"- "+listMember[ind]+"\n";
+                ind++;
             }
+            listTeam = listTeam + "TEAM " + teamNumber + "\n" + arrayTeamResult[y] + "\n\n";
         }
 
         tvList.setText(listTeam);
