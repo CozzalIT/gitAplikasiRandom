@@ -19,7 +19,7 @@ public class RandomDadu extends AppCompatActivity {
     }
 
     public void generateDice(View view){
-
+        etDice = findViewById(R.id.etDice);
         int dice = (int)(Math.random()*6) + 1;
         String hasil = Integer.toString(dice);
         etDice.setText(hasil);
